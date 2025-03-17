@@ -1,5 +1,6 @@
 // Set variables
 const container = document.getElementById('container');
+let isClicked = false;
 
 // Create function to inject the grid
 function createGrid(size) {
@@ -10,6 +11,10 @@ function createGrid(size) {
        for(let j = 0; j < size; j++) {
         const cell = document.createElement('div');
         cell.classList.add('grid-cell');
+        // Add click event listener to each cell as it's created
+        cell.addEventListener('click', () => {
+            cell.style.backgroundColor = 'black';
+        });
         row.appendChild(cell);
        };
        container.appendChild(row);

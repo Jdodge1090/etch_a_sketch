@@ -21,3 +21,7 @@ h1 {
     flex: 1;
     border: 1px solid black;
 }
+
+.grid-cell:hover {
+    background-color: #d3d3d3;
+}
