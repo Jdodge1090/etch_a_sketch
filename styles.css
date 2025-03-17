@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+#container {
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.grid-row {
+    display: flex;
+    flex: 1;
+}
+
+.grid-cell {
+    flex: 1;
+    border: 1px solid black;
+}
