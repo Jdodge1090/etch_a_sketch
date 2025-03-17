@@ -20,7 +20,6 @@ h1 {
     flex-direction: column;
     align-self: center;
     justify-self: center;
-    margin-top: 100px;
 }
 
 .grid-row {
@@ -37,4 +36,29 @@ h1 {
 .grid-cell:hover {
     background-color: #4c4b4b;
     opacity: 80%;
+}
+
+.main-content {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
 }
