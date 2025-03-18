@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch A Sketch</title>
+    <title>Pixel Art Creator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Etch-A-Sketch</h1>
+    <h1>Pixel Art Creator</h1>
     <div class="main-content">
         <div class="controls">
             <label for="color">Select a Color:</label>
@@ -21,6 +21,19 @@
                 <option value="violet">Violet</option>
                 <option value="black">Black</option>
             </select>
+            <p>Select Grid Size</p>
+            <div>
+                <input type="radio" id="24" name="gridSize" value="24">
+                <label for="24">24x24</label>
+            </div>
+            <div>
+                <input type="radio" id="48" name="gridSize" value="48">
+                <label for="48">48x48</label>
+            </div>
+            <div>
+                <input type="radio" id="64" name="gridSize" value="64">
+                <label for="64">64x64</label>
+            </div>
         </div>
         <div id="container"></div>
     </div>
