@@ -1,5 +1,6 @@
 const container = document.getElementById('container');
 const radioButtons = document.querySelectorAll('input[type="radio"]');
+const gridLines = document.getElementById('gridToggle');
 let currentColor = document.getElementById('color').value;
 let isDragging = false;
 
@@ -20,10 +21,8 @@ radioButtons.forEach(button => {
 });
 
 function createGrid(size) {
-    // Clear existing grid
     container.innerHTML = '';
     
-    // Create new grid
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
         row.classList.add('grid-row');
@@ -31,6 +30,9 @@ function createGrid(size) {
         for (let j = 0; j < size; j++) {
             const cell = document.createElement('div');
             cell.classList.add('grid-cell');
+            if (gridLines.checked) {
+                cell.classList.add('grid-lines');
+            }
             
             cell.addEventListener('click', (e) => {
                 if (!isDragging) {
@@ -43,6 +45,18 @@ function createGrid(size) {
         container.appendChild(row);
     }
 }
+
+// Move grid lines event listener outside createGrid
+gridLines.addEventListener('change', function() {
+    const cells = document.querySelectorAll('.grid-cell');
+    cells.forEach(cell => {
+        if (this.checked) {
+            cell.classList.add('grid-lines');
+        } else {
+            cell.classList.remove('grid-lines');
+        }
+    });
+});
 
 // Initialize with default grid (24x24)
 createGrid(24);
